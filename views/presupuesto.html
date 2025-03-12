@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solicita tu presupuesto en La Trattoria Valenciana">
+    <title>Presupuesto - La Trattoria Valenciana</title>
+    <link rel="stylesheet" href="../css/presupuesto.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/imagenes/logo.png" alt="Logotipo Restaurante La Trattoria Valenciana">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="presupuesto.html" class="activo">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="reserva.html">Reserva</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="presupuesto">
+            <h1>Solicita tu Presupuesto</h1>
+            <form id="formPresupuesto" novalidate>
+                <fieldset>
+                    <legend>Datos de Contacto</legend>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" maxlength="15" required>
+                        <span class="error" id="error-nombre"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" maxlength="40" required>
+                        <span class="error" id="error-apellidos"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" maxlength="9" required>
+                        <span class="error" id="error-telefono"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error" id="error-email"></span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Detalles del Pedido</legend>
+                    <div class="form-group">
+                        <label for="producto">Producto:</label>
+                        <select id="producto" name="producto" required>
+                            <option value="" disabled selected>Selecciona un producto</option>
+                            <option value="10">Pasta Carbonara - 10€</option>
+                            <option value="10">Pasta al Pesto - 10€</option>
+                            <option value="10">Pasta Cacio e Pepe - 10€</option>
+                            <option value="9">Pizza Margherita - 9€</option>
+                            <option value="11">Calzone fritto - 11€</option>
+                            <option value="15">Pizza con prosciutto iberico, rucola e grana - 15€</option>
+                            <option value="4.5">Tiramisú - 4,50€</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Extras:</label>
+                        <label><input type="checkbox" name="extras" value="2"> Extra queso Parmigiano (2€)</label>
+                        <label><input type="checkbox" name="extras" value="2"> Extra pesto (2€)</label>
+                        <label><input type="checkbox" name="extras" value="3"> Borde relleno (+3€)</label>
+                        <label><input type="checkbox" name="extras" value="1"> Extra prosciutto (+2€)</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="plazo">Plazo (días):</label>
+                        <input type="number" id="plazo" name="plazo" min="1" required>
+                        <span class="info">* Descuento del 5% si el plazo es mayor a 7 días</span>
+                    </div>
+                    <div class="form-group">
+                        <label>Presupuesto Final:</label>
+                        <output id="total">0€</output>
+                    </div>
+                </fieldset>
+
+                <div class="form-group condiciones">
+                    <label>
+                        <input type="checkbox" id="aceptar" name="aceptar" required>
+                        Acepto las <a href="aviso-legal.html" target="_blank">condiciones</a>
+                    </label>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="boton">Enviar</button>
+                    <button type="reset" class="boton reset">Resetear</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 La Trattoria Valenciana. Todos los derechos reservados.</p>
+        <p class="contact-info">Síguenos en redes sociales:</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/profile.php?id=61567780894798" target="_blank">
+                <img src="../assets/imagenes/facebook.png" alt="Facebook" width="30" height="30">
+            </a>
+            <a href="https://www.instagram.com/latrattoriavalenciana" target="_blank">
+                <img src="../assets/imagenes/instagram.png" alt="Instagram" width="30" height="30">
+            </a>
+        </div>
+        <p class="contact-info">Dirección: Carrer de Colón 25, Valencia, España</p>
+        <p class="contact-info">Teléfono: <a href="tel:+34961123456">+34 961 123 456</a></p>
+        <p class="contact-info"><a href="https://www.google.com/maps/place/Carrer+de+Col%C3%B3n,+25,+46004+Valencia,+Espa%C3%B1a" target="_blank">Ver ubicación</a></p>
+        <p class="contact-info"><a href="aviso-legal.html">Aviso Legal</a></p>
+    </footer>
+
+    <script src="../js/presupuesto.js"></script>
+</body>
+</html>
