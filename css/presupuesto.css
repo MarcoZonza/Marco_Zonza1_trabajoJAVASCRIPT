@@ -24,7 +24,7 @@ header {
 }
 
 .logo img {
-    height: 100px;
+    height: 120px;
     transition: transform 0.3s ease;
 }
 
@@ -211,8 +211,8 @@ footer a:hover {
 
 .social-media img {
     margin: 0 0.75rem;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -229,7 +229,7 @@ footer a:hover {
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        padding: 1rem;
+        padding: 1.5rem 1rem;
     }
 
     nav ul {
