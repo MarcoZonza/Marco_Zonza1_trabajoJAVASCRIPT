@@ -29,7 +29,9 @@ header {
 }
 
 .logo img {
-    height: 100px;
+    height: auto;
+    max-height: 100px;
+    width: auto;
     margin-right: 20px;
 }
 
@@ -73,11 +75,13 @@ h1 {
     text-align: center;
     color: #7a1f1f;
     margin-bottom: 20px;
+    font-size: 2rem;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 label {
@@ -92,11 +96,11 @@ input[type="number"],
 input[type="date"],
 select {
     padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
 }
 
 input[type="text"]:focus,
@@ -105,11 +109,14 @@ input[type="number"]:focus,
 input[type="date"]:focus,
 select:focus {
     border-color: #7a1f1f;
+    box-shadow: 0 0 5px rgba(122, 31, 31, 0.3);
+    outline: none;
 }
 
 nav ul li a:focus,
 button[type="submit"]:focus {
     outline: 2px solid #1f7a1f;
+    outline-offset: 2px;
 }
 
 button[type="submit"] {
@@ -120,21 +127,20 @@ button[type="submit"] {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button[type="submit"]:hover {
     background-color: #1f7a1f;
+    transform: translateY(-2px);
 }
 
+/* Footer */
 footer {
     background-color: #333333;
     color: white;
     text-align: center;
     padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
     margin-top: auto;
 }
 
@@ -142,7 +148,7 @@ footer a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
@@ -151,48 +157,71 @@ footer a:hover {
 
 footer p {
     color: white;
+    margin: 5px 0;
 }
 
 .contact-info {
     color: white;
-    margin: 5px 0;
 }
 
 .social-media {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .social-media a img {
     width: 30px;
     height: 30px;
-    margin: 0 10px;
-    transition: filter 0.3s;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .social-media a:hover img {
     filter: brightness(120%);
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: flex-start;
+        padding: 15px 20px;
     }
 
     .logo img {
-        height: 80px;
+        max-height: 80px;
     }
 
     nav ul {
         flex-direction: column;
+        width: 100%;
     }
 
     nav ul li {
         margin: 5px 0;
     }
 
+    nav ul li a {
+        display: block;
+        padding: 0.75rem;
+    }
+
     .container {
         max-width: 90%;
         margin-top: 180px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    nav ul li a,
+    button[type="submit"],
+    .social-media a img {
+        transition: none;
     }
 }
