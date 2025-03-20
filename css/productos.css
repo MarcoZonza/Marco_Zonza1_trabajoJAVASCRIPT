@@ -29,8 +29,9 @@ header {
 }
 
 .logo img {
-    height: 100px;
+    height: 80px;
     margin-right: 20px;
+    width: auto;
 }
 
 nav ul {
@@ -80,7 +81,7 @@ main {
     margin: 0 auto;
     padding: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 25px;
 }
 
@@ -166,8 +167,8 @@ footer p {
 }
 
 .social-media a img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin: 0 15px;
     transition: transform 0.3s ease;
 }
@@ -194,7 +195,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
     .galeria {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 15px;
         padding: 20px;
     }
@@ -218,9 +219,10 @@ footer a:hover {
     }
 
     .logo img {
-        height: 80px;
+        height: 70px;
         margin-right: 0;
         margin-bottom: 10px;
+        width: auto;
     }
 
     nav ul li {
@@ -244,6 +246,11 @@ footer a:hover {
 
     .galeria h2 {
         font-size: 1.3em;
+    }
+
+    .logo img {
+        height: 50px;
+        width: auto;
     }
 
     main {
