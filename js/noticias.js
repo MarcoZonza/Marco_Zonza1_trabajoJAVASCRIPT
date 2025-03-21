@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", async () => {
+(async () => {
     const noticiasContainer = document.getElementById("contenedor-noticias");
 
     const mostrarMensaje = (mensaje, esError = false) => {
@@ -65,4 +65,4 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.error("Error al cargar las noticias:", error);
         mostrarMensaje("Error al cargar las noticias. Por favor, intenta de nuevo más tarde.", true);
     }
-});
+})();
