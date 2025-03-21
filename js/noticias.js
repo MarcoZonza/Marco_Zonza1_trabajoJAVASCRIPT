@@ -1,5 +1,10 @@
-(async () => {
+document.addEventListener("DOMContentLoaded", async () => {
     const noticiasContainer = document.getElementById("contenedor-noticias");
+    
+    if (!noticiasContainer) {
+        console.error("No se encontró el elemento con ID 'contenedor-noticias'. Asegúrate de que exista en el HTML.");
+        return;
+    }
 
     const mostrarMensaje = (mensaje, esError = false) => {
         noticiasContainer.innerHTML = `<p class="${esError ? 'error' : 'info'}">${mensaje}</p>`;
@@ -65,4 +70,4 @@
         console.error("Error al cargar las noticias:", error);
         mostrarMensaje("Error al cargar las noticias. Por favor, intenta de nuevo más tarde.", true);
     }
-})();
+});
