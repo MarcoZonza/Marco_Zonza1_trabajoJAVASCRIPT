@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const noticiasContainer = document.getElementById("noticias-container");
+    const noticiasContainer = document.getElementById("contenedor-noticias");
 
     const mostrarMensaje = (mensaje, esError = false) => {
         noticiasContainer.innerHTML = `<p class="${esError ? 'error' : 'info'}">${mensaje}</p>`;
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     mostrarMensaje("Cargando noticias...");
 
     try {
-        const response = await fetch("../data/noticias.json");
+        const response = await fetch("data/noticias.json");
         if (!response.ok) {
             throw new Error(`No se pudo cargar el archivo JSON: ${response.status}`);
         }
