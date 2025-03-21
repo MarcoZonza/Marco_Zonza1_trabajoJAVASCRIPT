@@ -6,6 +6,7 @@
     <meta name="description" content="Contacta con La Trattoria Valenciana, restaurante italiano en Valencia.">
     <title>Contacto - La Trattoria Valenciana</title>
     <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <header>
@@ -50,7 +51,8 @@
             <p><strong>Dirección:</strong> Carrer de Colón 25, Valencia, España</p>
             <p><strong>Teléfono:</strong> <a href="tel:+34961123456">+34 961 123 456</a></p>
             <p><strong>Correo:</strong> <a href="mailto:info@latrattoriavalenciana.com">info@latrattoriavalenciana.com</a></p>
-            <p><a href="https://www.google.com/maps/place/Carrer+de+Col%C3%B3n,+25,+46004+Valencia,+Espa%C3%B1a" target="_blank">Ver ubicación en Google Maps</a></p>
+            <div id="map"></div>
+            <button class="calcular-ruta-btn" onclick="calculateRoute()">Calcular ruta desde mi ubicación</button>
         </section>
     </main>
 
@@ -70,5 +72,9 @@
         <p class="contact-info"><a href="https://www.google.com/maps/place/Carrer+de+Col%C3%B3n,+25,+46004+Valencia,+Espa%C3%B1a" target="_blank">Ver ubicación en Google Maps</a></p>
         <p class="contact-info"><a href="./aviso-legal.html">Aviso Legal</a></p>
     </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="../js/mapa.js"></script>
 </body>
 </html>
